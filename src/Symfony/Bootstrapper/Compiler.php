@@ -35,7 +35,7 @@ class Compiler
         foreach ($this->getFiles() as $file) {
             $path = str_replace(__DIR__.'/', '', $file);
 
-            if (false !== strpos($file, '.php')) {
+            if (false !== strpos($file, '.php') && false === strpos($file, '/skeleton/')) {
                 $content = Kernel::stripComments(file_get_contents($file));
             } else {
                 $content = file_get_contents($file);
