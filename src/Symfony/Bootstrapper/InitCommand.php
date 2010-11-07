@@ -53,19 +53,22 @@ class InitCommand extends Command
             throw new \RuntimeException('The current directory is not empty.');
         }
 
-        $parameters = array(
-            'class'       => $input->getOption('name'),
-            'application' => strtolower($input->getOption('name')),
-            'format'      => $input->getOption('format'),
-        );
-
         $filesystem = new Filesystem();
 
         $skeletonDir = __DIR__.'/../../skeleton';
 
-        $appPath = getcwd().'/'.$input->getOption('app-path');
+        $application = strtolower($input->getOption('name'));
+
+        $appPath = getcwd().'/'.$input->getOption('app-path', $application);
         $srcPath = getcwd().'/'.$input->getOption('src-path');
         $webPath = getcwd().'/'.$input->getOption('web-path');
+
+        $parameters = array(
+            'class'       => $input->getOption('name'),
+            'application' => $application,
+            'format'      => $input->getOption('format'),
+            'path'        => rtrim($input->getOption('app-path', $application), '//'),
+        );
 
         $filesystem->mirror($skeletonDir.'/application/generic', $appPath);
         $filesystem->mirror($skeletonDir.'/application/'.$input->getOption('format'), $appPath);

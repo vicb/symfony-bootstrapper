@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__.'/../{{ application }}/{{ class }}Kernel.php';
+require_once __DIR__.'/../{{ path }}/{{ class }}Kernel.php';
 
 use Symfony\Component\HttpFoundation\Request;
 
