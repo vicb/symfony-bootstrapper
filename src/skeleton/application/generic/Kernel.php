@@ -16,6 +16,7 @@ class {{ class }}Kernel extends Kernel
     {
         $bundles = array(
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
+            new Symfony\Bundle\TwigBundle\TwigBundle(),
 
             // enable third-party bundles
             new Symfony\Bundle\ZendBundle\ZendBundle(),
@@ -24,7 +25,6 @@ class {{ class }}Kernel extends Kernel
             //new Symfony\Bundle\DoctrineMigrationsBundle\DoctrineMigrationsBundle(),
             //new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
             //new Symfony\Bundle\PropelBundle\PropelBundle(),
-            //new Symfony\Bundle\TwigBundle\TwigBundle(),
 
             // register your bundles
         );
