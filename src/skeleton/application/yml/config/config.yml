@@ -5,16 +5,14 @@ app.config:
     router:        { resource: "%kernel.root_dir%/config/routing.yml" }
     validation:    { enabled: true, annotations: true }
     templating:    {} #assets_version: SomeVersionScheme
-    #user:
-    #    default_locale: fr
-    #    session:
-    #        name:     SYMFONY
-    #        type:     Native
-    #        lifetime: 3600
+    session:
+        default_locale: en
+        lifetime: 3600
 
 # Twig Configuration
 twig.config:
-    debug: "%kernel.debug%"
+    debug:            %kernel.debug%
+    strict_variables: %kernel.debug%
 
 ## Doctrine Configuration
 #doctrine.dbal:

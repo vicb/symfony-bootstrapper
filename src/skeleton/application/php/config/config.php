@@ -9,18 +9,17 @@ $container->loadFromExtension('app', 'config', array(
     'templating'    => array(
         #'assets_version' => "SomeVersionScheme",
     ),
-    #'user' => array(
-    #    'default_locale' => "fr",
-    #    'session' => array(
-    #        'name' => "SYMFONY",
-    #        'type' => "Native",
-    #        'lifetime' => "3600",
-    #    )
-    #),
+    'session' => array(
+        'default_locale' => "en",
+        'lifetime' => "3600",
+    ),
 ));
 
 // Twig Configuration
-$container->loadFromExtension('twig', 'config', array('debug' => '%kernel.debug%'));
+$container->loadFromExtension('twig', 'config', array(
+    'debug' => '%kernel.debug%',
+    'strict_variables' => '%kernel.debug%',
+));
 
 // Doctrine Configuration
 /*
