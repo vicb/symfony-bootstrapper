@@ -33,11 +33,11 @@ class InitCommand extends Command
     {
         $this
             ->setDefinition(array(
-                new InputOption('name', '', InputOption::PARAMETER_REQUIRED, 'The application name (App)', 'App'),
-                new InputOption('app-path', '', InputOption::PARAMETER_REQUIRED, 'The path to the application (app/)', 'app/'),
-                new InputOption('src-path', '', InputOption::PARAMETER_REQUIRED, 'The path to the application (src/)', 'src/'),
-                new InputOption('web-path', '', InputOption::PARAMETER_REQUIRED, 'The path to the public web root (web/)', 'web/'),
-                new InputOption('format', '', InputOption::PARAMETER_REQUIRED, 'Use the format for configuration files (php, xml, or yml)', 'xml'),
+                new InputOption('name', '', InputOption::VALUE_REQUIRED, 'The application name (App)', 'App'),
+                new InputOption('app-path', '', InputOption::VALUE_REQUIRED, 'The path to the application (app/)', 'app/'),
+                new InputOption('src-path', '', InputOption::VALUE_REQUIRED, 'The path to the application (src/)', 'src/'),
+                new InputOption('web-path', '', InputOption::VALUE_REQUIRED, 'The path to the public web root (web/)', 'web/'),
+                new InputOption('format', '', InputOption::VALUE_REQUIRED, 'Use the format for configuration files (php, xml, or yml)', 'xml'),
             ))
             ->setName('init')
         ;

@@ -30,6 +30,6 @@ class Application extends BaseApplication
     {
         parent::__construct('Symfony Bootstrapper', self::VERSION);
 
-        $this->addCommand(new InitCommand());
+        $this->add(new InitCommand());
     }
 }
