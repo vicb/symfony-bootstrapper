@@ -57,8 +57,8 @@ class InitCommandTest extends \PHPUnit_Framework_TestCase
 
         $content = file_get_contents($file);
         $content = str_replace(
-            "__DIR__.'/../src/vendor/Symfony/src/Symfony/Bundle'",
-            "'".__DIR__."/../../../../src/vendor/Symfony/src/Symfony/Bundle'",
+            "__DIR__.'/../src/vendor/symfony/src/Symfony/Bundle'",
+            "'".__DIR__."/../../../../src/vendor/symfony/src/Symfony/Bundle'",
             $content
         );
         file_put_contents($file, $content);
