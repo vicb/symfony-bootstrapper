@@ -2,7 +2,7 @@
 
 require_once __DIR__.'/vendor/symfony/src/Symfony/Component/HttpKernel/bootstrap.php';
 
-use Symfony\Component\HttpFoundation\UniversalClassLoader;
+use Symfony\Component\ClassLoader\UniversalClassLoader;
 
 $loader = new UniversalClassLoader();
 $loader->registerNamespaces(array(
